@@ -17,6 +17,7 @@ Research Interests
 
 News
 ======
+- **2026.10** &nbsp; Our SenseNova technical report [*Has GPT-6-Astra Achieved Embodied Intelligence?*](https://arxiv.org/abs/2610.22471) is released on arXiv.
 - **2026.09** &nbsp; Started a research internship with the SenseNova team at SenseTime.
 - **2026** &nbsp; Started my Ph.D. at the Institute of Automation, Chinese Academy of Sciences.
 - **2026** &nbsp; Received my B.Eng. degree from China Agricultural University.
