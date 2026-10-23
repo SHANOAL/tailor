@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Tailai Chen"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. student at CASIA. Unified multimodal understanding & generation, efficient foundation models."
+  bio              : "Ph.D. student at CASIA. Unified multimodal understanding & generation, efficient foundation models, representation learning."
   location         : "Beijing, China"
   employer         : "Institute of Automation, Chinese Academy of Sciences"
   uri              : # URL
@@ -81,12 +81,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+  published:
+    title: 'Published'
+  preprints:
+    title: 'Preprints'
+  reports:
+    title: 'Technical Reports'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

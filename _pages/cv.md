@@ -22,9 +22,16 @@ Research Interests
 ======
 * Unified multimodal models for understanding and generation
 * Efficient foundation-model architectures
+* Representation learning
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+{% for category in site.publication_category %}
+  {% assign shown = false %}
+  {% for post in site.publications reversed %}
+    {% if post.category != category[0] %}{% continue %}{% endif %}
+    {% unless shown %}<h3>{{ category[1].title }}</h3><ul>{% assign shown = true %}{% endunless %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}
+  {% if shown %}</ul>{% endif %}
+{% endfor %}

@@ -13,6 +13,7 @@ Research Interests
 ======
 - **Unified multimodal models** that understand and generate within a single architecture.
 - **Efficient foundation-model architectures**: making large generative and multimodal models faster to train and deploy.
+- **Representation learning**: visual and multimodal representations that serve both understanding and generation.
 
 News
 ======
