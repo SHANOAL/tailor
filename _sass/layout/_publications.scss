@@ -1,0 +1,142 @@
+/* ==========================================================================
+   PUBLICATION CARDS
+   ========================================================================== */
+
+/* rules are nested under .pub-card so they win over `.page__content p` and
+   `.archive a` when a card is rendered inside a page or an archive */
+.pub-card {
+  display: flex;
+  align-items: flex-start;
+  margin: 1.25em 0 1.5em;
+  padding: 1em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  background-color: var(--global-bg-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  .pub-card__media {
+    position: relative;
+    flex: 0 0 38%;
+    max-width: 38%;
+    margin-right: 1.25em;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--global-border-color);
+      border-radius: 6px;
+    }
+  }
+
+  .pub-card__badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 8px;
+    font-size: $type-size-7;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background-color: #2f5aa8;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .pub-card__badge--inline {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5em;
+    box-shadow: none;
+  }
+
+  .pub-card__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .pub-card__title {
+    margin: 0 0 0.4em;
+    padding: 0;
+    font-size: $type-size-5;
+    line-height: 1.35;
+    border-bottom: none;
+
+    a {
+      color: var(--global-text-color);
+    }
+
+    a:hover {
+      color: var(--global-link-color);
+    }
+  }
+
+  .pub-card__authors,
+  .pub-card__venue,
+  .pub-card__excerpt {
+    margin: 0 0 0.4em;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+
+  .pub-card__venue {
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+
+  .pub-card__excerpt {
+    margin-bottom: 0.75em;
+  }
+
+  .pub-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .pub-btn,
+  .pub-btn:visited {
+    display: inline-block;
+    padding: 2px 12px;
+    font-size: $type-size-7;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--global-link-color);
+    border: 1px solid var(--global-link-color);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+
+  .pub-btn:hover {
+    color: #fff;
+    background-color: var(--global-link-color);
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .pub-card {
+    flex-direction: column;
+
+    .pub-card__media {
+      flex-basis: auto;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 1em;
+    }
+  }
+}

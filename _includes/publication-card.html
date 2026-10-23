@@ -1,0 +1,18 @@
+{% include base_path %}
+{% if post.link %}{% assign pub_href = post.link %}{% else %}{% assign pub_href = base_path | append: post.url %}{% endif %}
+<div class="pub-card">
+{% if post.thumbnail %}
+  <div class="pub-card__media">
+    <a href="{{ pub_href }}"><img src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ base_path }}/images/{{ post.thumbnail }}{% endif %}" alt="{{ post.title | strip_html | escape }}" loading="lazy"></a>
+    {% if post.badge %}<span class="pub-card__badge">{{ post.badge }}</span>{% endif %}
+  </div>
+{% endif %}
+  <div class="pub-card__body">
+    {% unless post.thumbnail %}{% if post.badge %}<span class="pub-card__badge pub-card__badge--inline">{{ post.badge }}</span>{% endif %}{% endunless %}
+    <h3 class="pub-card__title"><a href="{{ pub_href }}">{{ post.title }}</a></h3>
+    {% if post.authors %}<p class="pub-card__authors">{{ post.authors }}</p>{% endif %}
+    {% if post.venue %}<p class="pub-card__venue">{{ post.venue }}</p>{% endif %}
+    {% if post.excerpt %}<p class="pub-card__excerpt">{{ post.excerpt | strip_html | strip }}</p>{% endif %}
+    <p class="pub-card__links">{% for l in post.links %}<a class="pub-btn" href="{{ l.url }}">{% if l.icon %}<i class="{{ l.icon }}" aria-hidden="true"></i> {% endif %}{{ l.name }}</a>{% endfor %}<a class="pub-btn" href="{{ base_path }}{{ post.url }}"><i class="fas fa-align-left" aria-hidden="true"></i> Abstract</a></p>
+  </div>
+</div>

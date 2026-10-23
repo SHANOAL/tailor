@@ -22,6 +22,14 @@ News
 - **2026** &nbsp; Started my Ph.D. at the Institute of Automation, Chinese Academy of Sciences.
 - **2026** &nbsp; Received my B.Eng. degree from China Agricultural University.
 
+Selected Publications
+======
+
+{% assign selected_pubs = site.publications | where: "selected", true | sort: "date" | reverse %}{% for post in selected_pubs %}
+{% include publication-card.html %}
+{% endfor %}
+<p class="pub-more"><a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a></p>
+
 Education
 ======
 - **Ph.D.**, Institute of Automation, Chinese Academy of Sciences, 2026 – present
